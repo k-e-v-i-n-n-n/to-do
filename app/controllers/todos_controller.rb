@@ -1,10 +1,7 @@
 class TodosController < ApplicationController
 
     def index
-
-        user = User.find_by(id: session[:user_id])
-        todos = user.todos
+        todos = Todo.all
         render json: todos
-
     end
 end
