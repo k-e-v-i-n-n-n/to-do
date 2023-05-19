@@ -1,10 +1,13 @@
 import ListHeader from "./components/ListHeader"
+import Auth from "./components/Auth"
 import { useContext, useState, useEffect } from "react"
 import {AppContext} from "./Context"
 import ListItem from "./components/ListItem"
 
 const App = () => {
   const {user, setUser, tasks, setTasks} = useContext(AppContext) 
+
+  const authToken = false
 
   useEffect(() => {
 
@@ -18,8 +21,13 @@ const App = () => {
 
   return (
     <div className="app" >
-         <ListHeader listName={"Holiday List : )"}/>
+      {!authToken && <Auth/>}
+      
+      {authToken && <>
+        <ListHeader listName={"Holiday List : )"}/>
       {tasks?.map((task) => <ListItem key={task.id} task={task}  />)}
+      </>}
+         
     </div>
   )
 }
