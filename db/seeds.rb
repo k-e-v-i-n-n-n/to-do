@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-users = User.create([{username: "kevin", user_email: "kevin@echelle.com"}])
-todos = Todo.create([{title: "pack suitcases", progress: 7}])
+
+todos = Todo.create({title: "pack suitcases", progress: 7, user_id: 1})
 
 puts "SEEEDING!"
