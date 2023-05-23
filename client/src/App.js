@@ -19,12 +19,20 @@ const App = () => {
       {r.json().then(r => console.log("/api/me says", r))}})
   }, [])
 
+  function signOut(){
+    fetch("/api/logout", 
+    {method: "DELETE"})
+    .then(() => {setUser(null)})
+
+    console.log("signout")
+  }
+
   return (
     <div className="app" >
-      {!authToken && <Auth/>}
+      {!user && <Auth/>}
       
-      {authToken && <>
-        <ListHeader listName={"Holiday List : )"}/>
+      {user && <>
+        <ListHeader signOut={signOut} listName={"Holiday List : )"}/>
       {tasks?.map((task) => <ListItem key={task.id} task={task}  />)}
       </>}
          

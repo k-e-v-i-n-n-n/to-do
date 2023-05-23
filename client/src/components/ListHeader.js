@@ -1,9 +1,6 @@
-const ListHeader = ({listName}) => {
+const ListHeader = ({listName, signOut}) => {
 
-  function signOut(){
-
-    console.log("signout")
-  }
+  
     return (
       <div className="list-header" >
 

@@ -19,6 +19,13 @@ margin-top: 50px;
 
 }
 
+input {
+    margin: 11px 0;
+    padding: 12px 16px;
+    border-radius: 7px;
+    border: 1.5px solid rgb(230, 232, 236);
+  }
+
 .list-header{
 width: 100%;
 display: flex;
@@ -39,4 +46,47 @@ justify-content: space-between;
     margin: 0 5px;
     padding: 5px 10px;
     font-size: 10px;
+}
+
+/* -------------------------------------- AUTH */
+
+.auth-container{
+
+    display: flex;
+    justify-content: center;
+    margin:5px;
+}
+
+.auth-container-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    overflow: hidden;
+    box-shadow: rgba(0,0,0,0.05) 0 6px 24px, rgba(0,0,0,0.08) 0 0 0 1px;
+
+    width: 475px;
+    border-radius: 1px;
+}
+
+.auth-container-box form{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 375px;
+    padding:10px;
+}
+
+.auth-options{
+
+    display: flex;
+}
+
+.auth-options button {
+
+    width: 50%;
+    padding: 10px;
+    border: none;
+    color: rgb(35,38,47);
 }
